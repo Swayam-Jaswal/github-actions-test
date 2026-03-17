@@ -1,0 +1,27 @@
+name : CI
+on : [push]
+jobs :
+    build:
+        runs-on : [ubuntu-latest, window-latest]
+
+        steps :
+            - name : Check code
+              uses : actions/checkout@v4
+
+            - name : Setup Node
+              uses : actions/setup-node@v4
+              with :
+                node_version : 18
+
+            
+            - name : Check node version
+              run : node -v
+
+            - name : Run Index
+              run : node index.js
+
+            - name: Install Dependenc
+              run: npm install
+
+            - name: Run Test
+              run: npm test

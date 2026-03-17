@@ -2,7 +2,7 @@ name : CI
 on : [push]
 jobs :
     build:
-        runs-on : ubuntu-latest
+        runs-on : [ubuntu-latest, window-latest]
 
         steps :
             - name : Check code

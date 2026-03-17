@@ -1,1 +1,1 @@
-console.log("hello ithub actions");
+console.log("hello github actions");
